@@ -1,6 +1,57 @@
 .header {
-
     $h: &;
+
+    &__primary {
+
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        max-width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__nav {
+        display: flex;
+
+    }
+
+    &__menu {
+        display: flex;
+        justify-content:flex-end;
+
+        li {
+            margin-left: 20px;
+        }
+    }
+
+    &__secondary {
+        background: transparentize($pink, 0.9);
+
+    }
+
+    &__contact-number {
+        line-height: 1;
+        font-size: 2vw;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+
+        @include mq(md) {
+            justify-content: flex-end;
+        }
+
+        li {
+            margin-left: 20px;;
+        }
+    }
+
 
     &__hamburguer {
         cursor: pointer;

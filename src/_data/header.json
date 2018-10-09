@@ -1,6 +1,26 @@
 [
     {
-        "name":"",
-        "url":""
+        "name":"¿Quienes somos?",
+        "url":"/"
+    },
+    {
+        "name":"¿Que hacemos?",
+        "url":"/"
+    },
+    {
+        "name":"Novedades",
+        "url":"/"
+    },
+    {
+        "name":"Principios",
+        "url":"/"
+    },
+    {
+        "name":"Sumate",
+        "url":"/"
+    },
+    {
+        "name":"Contactanos",
+        "url":"/"
     }
 ]
