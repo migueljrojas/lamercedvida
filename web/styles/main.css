@@ -15460,15 +15460,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .footer__contact {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.footer__contact__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-transform: translateY(-30%);
@@ -15478,15 +15475,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 8px;
   margin-bottom: -20px;
 }
 
 @media (min-width: 992px) {
-  .footer__contact__container {
+  .footer__contact {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-transform: translateY(-50%);
@@ -15494,7 +15489,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
-.footer__contact__container__data {
+.footer__contact__data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15506,13 +15501,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (min-width: 992px) {
-  .footer__contact__container__data {
+  .footer__contact__data {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
 }
 
-.footer__contact__container__data i {
+.footer__contact__data i {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -15525,7 +15520,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (min-width: 992px) {
-  .footer__contact__container__data i {
+  .footer__contact__data i {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -15534,7 +15529,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
-.footer__contact__container__data__phone {
+.footer__contact__data__phone {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
@@ -15547,7 +15542,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (min-width: 992px) {
-  .footer__contact__container__data__phone {
+  .footer__contact__data__phone {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -15555,7 +15550,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
-.footer__contact__container__data__text {
+.footer__contact__data__text {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -15568,7 +15563,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (min-width: 992px) {
-  .footer__contact__container__data__text {
+  .footer__contact__data__text {
     font-size: 28px;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
@@ -15576,11 +15571,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
-.footer__contact__buttons__container {
+.footer__contact__buttons {
   padding: 0 5px;
 }
 
-.footer__contact__buttons__container a {
+.footer__contact__button {
   display: inline-block;
   background: #fe0061;
   color: #fff;
@@ -15602,7 +15597,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (min-width: 992px) {
-  .footer__contact__buttons__container a {
+  .footer__contact__button {
     display: inline-block;
     background: #fe0061;
     color: #fff;
@@ -15623,7 +15618,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
-.footer__contact__buttons__container a:first-of-type {
+.footer__contact__button:first-of-type {
   margin-bottom: 5px;
 }
 
@@ -15637,7 +15632,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding-top: 16%;
   padding-bottom: 16%;
   background: #ebebeb;
-  display: block;
 }
 
 @media (min-width: 768px) {
@@ -15673,12 +15667,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .donate-cta__contact-wrapper {
-  display: inline-block;
   text-align: center;
 }
 
 @media (min-width: 992px) {
   .donate-cta__contact-wrapper {
+    display: inline-block;
     padding-left: 50px;
   }
 }

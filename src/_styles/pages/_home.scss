@@ -3,13 +3,11 @@
       position: relative;
 
       &__image{
-
         @include img(120%, 100%, 100%, auto);
 
         @include mq(md) {
           @include img(40%);
         }
-
       }
 
       &__data {
@@ -18,13 +16,11 @@
         padding: 20px;
         width: 100%;
 
-
         @include mq(md) {
           max-width: 590px;
           top: 25%;
           right: 50%;
           width: 50%;
-
         }
 
         &__title {
@@ -33,7 +29,6 @@
 
           @include mq(md) {
             @include title(36px);
-
           }
         }
 
@@ -70,22 +65,20 @@
 
       &__image {
         @include img($ratio: 67%, $imgheight: 100%, $imgwidth: auto);
-
       }
 
       &__content {
         padding: 20px;
+
         @include mq(md) {
           @include padd();
           max-width: 590px;
           padding-left: 50px;
-
         }
 
         &__title {
           color: $blue;
           text-align: center;
-
         }
 
         &__text {
@@ -94,16 +87,11 @@
       }
     }
 
-  &__donation {
-
-  }
-
   &__what-we-do {
     @include padd(both, half);
 
     &__data {
       max-width: 400px;
-
 
       &__title {
         color: transparentize($mainColor, 0.5);
@@ -124,7 +112,6 @@
           text-align: left;
         }
       }
-
     }
 
     &__list {
@@ -172,14 +159,13 @@
     }
 
     &__article {
+      display: block;
+      width: 350px;
+      max-height: 500px;
 
       &__image {
         @include img(55%);
       }
-
-      display: block;
-      width: 350px;
-      max-height: 500px;
 
       &__data {
         display: inline-block;
@@ -197,8 +183,8 @@
         }
 
         &__more {
-            font-weight: 700;
-            color: $darkGray;
+          font-weight: 700;
+          color: $darkGray;
         }
       }
     }
@@ -237,7 +223,6 @@
     }
 
     &__data {
-
       display: block;
       text-align: center;
       padding: 0 20px 0 20px;
@@ -250,7 +235,6 @@
       }
 
       &__title {
-
         @include title(21px);
         text-align: center;
         text-transform: uppercase;

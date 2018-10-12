@@ -1,7 +1,6 @@
 .donate-cta{
   @include padd();
   background: $lightGray;
-  display: block;
 
   &__text {
     text-align: center;
@@ -20,13 +19,12 @@
   }
 
   &__contact-wrapper {
-    display: inline-block;
     text-align: center;
 
     @include mq(md) {
+      display: inline-block;
       padding-left: 50px;
     }
-
   }
 
   &__phone {
