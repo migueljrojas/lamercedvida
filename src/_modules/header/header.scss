@@ -1,56 +1,78 @@
 .header {
     $h: &;
 
-    &__primary {
+    &__secondary {
+      background: transparentize($pink, 0.9);
 
     }
 
     &__container {
-        display: flex;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      justify-content: center;
+
+
+      @include mq(md) {
         justify-content: space-between;
-        align-items: center;
         padding: 20px 0;
         max-width: 1180px;
-        margin-left: auto;
-        margin-right: auto;
+      }
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__contact-number {
+      line-height: 1;
+      font-size: 3.5vw;
+
+      @include mq(md) {
+        font-size: 2vw;
+
+      }
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+
+      @include mq(md) {
+        justify-content: flex-end;
+      }
+
+      li {
+        margin-left: 20px;
+      }
+    }
+
+    &__logo {
+
     }
 
     &__nav {
+      display: none;
+
+      @include mq(md) {
         display: flex;
+
+      }
 
     }
 
     &__menu {
-        display: flex;
-        justify-content:flex-end;
+        @include mq(md) {
+          display: flex;
+          justify-content:flex-end;
+        }
 
         li {
             margin-left: 20px;
         }
     }
 
-    &__secondary {
-        background: transparentize($pink, 0.9);
 
-    }
 
-    &__contact-number {
-        line-height: 1;
-        font-size: 2vw;
-    }
-
-    &__social {
-        display: flex;
-        justify-content: center;
-
-        @include mq(md) {
-            justify-content: flex-end;
-        }
-
-        li {
-            margin-left: 20px;;
-        }
-    }
 
 
     &__hamburguer {
