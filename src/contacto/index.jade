@@ -1,0 +1,35 @@
+extends ../_layouts/base
+
+include ./_modules/donate-cta/donate-cta
+
+block content
+    main.contacto
+        section.contacto__hero
+            .contacto__hero__slider
+                .contacto__hero__donation__image
+                    img(src='https://picsum.photos/1480/700')
+            
+            .contacto__hero__data
+                h1.contacto__hero__data__title Contactanos
+
+                p.contacto__hero__dat__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                .contacto__hero__data__phone
+                  i.fa.fa-phone
+                  a(href="+54 11 4708-4108") 4708-4108
+
+        section.contacto__contact
+            .contacto__contact__wrapper
+
+                .contact__contact__image
+                    img(src='https://picsum.photos/1480/700')
+
+                .contacto__contact__form
+                    h1 Datos de Contacto
+                    input.contacto__contact__name
+                    input.contacto__contact__mail
+                    input.contacto__contact__phone
+                    input.contacto__contact__message
+                    
+        section.donation
+            +donate-cta
