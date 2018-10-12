@@ -1,12 +1,14 @@
 mixin donate-cta(spec)
-    section.donate-cta
+    .donate-cta
         .container
-            .row
+            .row.flexrow
                 .col-xs-24.col-sm-12
-                    h2.donate-cta__text ¿COMO PUEDES
+                    h2.donate-cta__text ¿COMO PUEDES 
                         span AYUDAR?
-    
+
                 .col-xs-24.col-sm-12
-                    p.donate-cta__phone LLAMANOS AL
-                        a(href="tel:+54 11 4708-0148") 4708-0148
-                    a.donate-cta__donation-link HAS TU DONACION 
+                  .donate-cta__contact-wrapper
+                    p.donate-cta__phone LLAMANOS AL 
+                        a(href="tel:+54 11 4708-0148")
+                          strong 4708-0148
+                    button.donate-cta__donation-link HAS TU DONACION 
