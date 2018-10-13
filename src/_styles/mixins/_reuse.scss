@@ -2,14 +2,14 @@
     transition: $prop $d $e;
 }
 
-@mixin title($size: $lg, $color: $white, $align: 'left') {
+@mixin title($size: $head, $color: $white, $align: 'left') {
     text-transform: uppercase;
     font-size: $size;
     color: $color;
     text-align: #{$align};
 }
 
-@mixin img($ratio: 56.5%, $width: 100%) {
+@mixin img($ratio: 56.5%, $width: 100%, $imgheight: auto, $imgwidth: 100%) {
     position: relative;
     width: $width;
     overflow: hidden;
@@ -18,7 +18,8 @@
 
     img {
         position: absolute;
-        width: 100%;
+        width: $imgwidth;
+        height: $imgheight;
     }
 }
 
@@ -170,4 +171,16 @@
             transform: rotate(-45deg);
         }
     }
+}
+
+@mixin btn($btnwhith: 300px) {
+  display: inline-block;
+  background: $mainColor;
+  color: $white;
+  padding: 10px 50px 13px 50px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  min-width: $btnwhith;
+  text-align: center;
 }
