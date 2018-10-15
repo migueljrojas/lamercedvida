@@ -1,0 +1,68 @@
+extends ../_layouts/base
+
+include ../_modules/donate-cta/donate-cta
+include ../_modules/videos/videos
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+
+  main.nosotros
+    section.nosotros__hero
+      .nosotros__hero__image
+        img(src='https://picsum.photos/1480/700')
+      
+      .nosotros__hero__data
+        h1.nosotros__hero__data__title Nosotros
+
+        p.nosotros__hero__data__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    +donate-cta
+          
+    section.nosotros__mision-vision__body
+      .nosotros__mision-vision__col
+        .nosotros__mision-vision__image
+          img(src='https://picsum.photos/1480/700')
+      
+      .nosotros__mision-vision__col
+        .nosotros__mision-vision__content
+          h1.nosotros__mision-vision__title MISIÓN, VISIÓN
+        
+          p.nosotros__mision-vision__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p.nosotros__mision-vision__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p.nosotros__mision-vision__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          
+
+    section.nosotros__valores__body  
+      .nosotros__valores__col
+        .nosotros__valores__image
+          img(src='https://picsum.photos/1480/700')
+
+      .nosotros__valores__col
+        .nosotros__valores__content
+          h1.nosotros__valores__title VALORES
+
+          ul.nosotros__valores__list
+            li.nosotros__valores__item 
+              span.nosotros__valores__number 1.
+              p.nosotros__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+            li.nosotros__valores__item 
+              span.nosotros__valores__number 2.
+              p.nosotros__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+            li.nosotros__valores__item 
+              span.nosotros__valores__number 3.
+              p.nosotros__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+            li.nosotros__valores__item 
+              span.nosotros__valores__number 4.
+              p.nosotros__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+            li.nosotros__valores__item 
+              span.nosotros__valores__number 5.
+              p.nosotros__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+    +videos

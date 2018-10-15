@@ -1,35 +1,51 @@
 extends ../_layouts/base
 
-include ./_modules/donate-cta/donate-cta
+include ../_modules/donate-cta/donate-cta
+include ../_modules/videos/videos
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
 
 block content
     main.contacto
-        section.contacto__hero
-            .contacto__hero__slider
-                .contacto__hero__donation__image
-                    img(src='https://picsum.photos/1480/700')
+      section.contacto__hero
+        .contacto__hero__image
+          img(src='https://picsum.photos/1480/700')
+        
+        .contacto__hero__data
+          h1.contacto__hero__data__title Contactanos
+
+          p.contacto__hero__data__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+      +donate-cta
             
-            .contacto__hero__data
-                h1.contacto__hero__data__title Contactanos
+      section.contacto__body
+        
+        .contacto__body__col
+          form.contacto__form
+            h1 Datos de Contacto
+          
+            .contacto__form__group
+              label.contacto__form__label Nombre de Contacto
+              input.contacto__form__input(placeholder='Ingrese su Nombre de Contacto', type='text')
 
-                p.contacto__hero__dat__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .contacto__form__group
+              label.contacto__form__label E-Mail
+              input.contacto__form__input(placeholder='Ingrese su Correo Electronico', type='email')
 
-                .contacto__hero__data__phone
-                  i.fa.fa-phone
-                  a(href="+54 11 4708-4108") 4708-4108
+            .contacto__form__group
+              label.contacto__form__label Numero de Telefono
+              input.contacto__form__input(placeholder='Ingrese su Numero de Telefono', type='phone')
 
-        section.contacto__contact
-            .contacto__contact__wrapper
+            .contacto__form__group
+              label.contacto__form__label Su Mensaje
+              textarea.contacto__form__input.contacto__form__input--textarea(placeholder='Escriba su Mensaje')
 
-                .contact__contact__image
-                    img(src='https://picsum.photos/1480/700')
-
-                .contacto__contact__form
-                    h1 Datos de Contacto
-                    input.contacto__contact__name
-                    input.contacto__contact__mail
-                    input.contacto__contact__phone
-                    input.contacto__contact__message
-                    
-        section.donation
-            +donate-cta
+            .contacto__form__group
+              button.contacto__form__submit Enviar
+            
+        .contacto__body__col
+          .contacto__body__image
+            img(src='https://picsum.photos/1480/700')
+      
