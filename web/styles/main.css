@@ -16201,31 +16201,43 @@ button._button {
   font-size: 36px;
 }
 
-.home__news__col {
+.home__news__slider {
   padding-top: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @media (min-width: 768px) {
-  .home__news__col {
+  .home__news__slider {
     padding-top: 6%;
   }
 }
 
 @media (min-width: 992px) {
-  .home__news__col {
+  .home__news__slider {
     padding-top: 4%;
   }
 }
 
+.home__news__slider .slick-prev:before,
+.home__news__slider .slick-next:before {
+  color: #85cff6;
+}
+
+.home__news__slider .slick-prev {
+  left: -40px;
+}
+
+.home__news__slider .slick-next {
+  right: -40px;
+}
+
+.home__news__slide {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .home__news__article {
   display: block;
-  width: 350px;
+  width: 100%;
   max-height: 500px;
 }
 
@@ -16672,13 +16684,10 @@ button._button {
   max-width: 400px;
 }
 
-.nosotros__mision-vision__body {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 @media (min-width: 768px) {
-  .nosotros__mision-vision__body {
+  .nosotros__mision-vision, .nosotros__valores {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16686,12 +16695,12 @@ button._button {
 }
 
 @media (min-width: 992px) {
-  .nosotros__mision-vision__col {
+  .nosotros__mision-vision__col, .nosotros__valores__col {
     width: 50%;
   }
 }
 
-.nosotros__mision-vision__content {
+.nosotros__mision-vision__content, .nosotros__valores__content {
   padding-top: 16%;
   padding-bottom: 16%;
   padding-left: 20px;
@@ -16699,27 +16708,27 @@ button._button {
 }
 
 @media (min-width: 768px) {
-  .nosotros__mision-vision__content {
+  .nosotros__mision-vision__content, .nosotros__valores__content {
     padding-top: 12%;
     padding-bottom: 12%;
   }
 }
 
 @media (min-width: 992px) {
-  .nosotros__mision-vision__content {
+  .nosotros__mision-vision__content, .nosotros__valores__content {
     padding-top: 8%;
     padding-bottom: 8%;
   }
 }
 
 @media (min-width: 768px) {
-  .nosotros__mision-vision__content {
+  .nosotros__mision-vision__content, .nosotros__valores__content {
     padding-left: 50px;
     max-width: 590px;
   }
 }
 
-.nosotros__mision-vision__title {
+.nosotros__mision-vision__title, .nosotros__valores__title {
   margin: 0;
   margin-bottom: 10px;
   color: #85cff6;
@@ -16728,36 +16737,23 @@ button._button {
 }
 
 @media (min-width: 768px) {
-  .nosotros__mision-vision__title {
+  .nosotros__mision-vision__title, .nosotros__valores__title {
     font-size: 36px;
   }
 }
 
-.nosotros__mision-vision__image {
+.nosotros__mision-vision__image, .nosotros__valores__image {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding-bottom: 78%;
+  padding-bottom: 85%;
   height: 0;
 }
 
-.nosotros__mision-vision__image img {
+.nosotros__mision-vision__image img, .nosotros__valores__image img {
   position: absolute;
   width: auto;
   height: 100%;
-}
-
-.nosotros__valores__body {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media (min-width: 768px) {
-  .nosotros__valores__body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 @media (min-width: 992px) {
@@ -16773,62 +16769,6 @@ button._button {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-}
-
-.nosotros__valores__image {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 78%;
-  height: 0;
-}
-
-.nosotros__valores__image img {
-  position: absolute;
-  width: auto;
-  height: 100%;
-}
-
-.nosotros__valores__content {
-  padding-top: 16%;
-  padding-bottom: 16%;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-@media (min-width: 768px) {
-  .nosotros__valores__content {
-    padding-top: 12%;
-    padding-bottom: 12%;
-  }
-}
-
-@media (min-width: 992px) {
-  .nosotros__valores__content {
-    padding-top: 8%;
-    padding-bottom: 8%;
-  }
-}
-
-@media (min-width: 768px) {
-  .nosotros__valores__content {
-    padding-left: 50px;
-    max-width: 590px;
-  }
-}
-
-.nosotros__valores__title {
-  margin: 0;
-  margin-bottom: 20px;
-  color: #85cff6;
-  font-weight: 600;
-  font-size: 28px;
-}
-
-@media (min-width: 768px) {
-  .nosotros__valores__title {
-    font-size: 36px;
   }
 }
 

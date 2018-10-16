@@ -16,7 +16,6 @@
       padding: 20px;
       width: 100%;
 
-
       @include mq(md) {
         max-width: 590px;
         top: 25%;
@@ -45,14 +44,13 @@
     }
   }
 
-  &__mision-vision {
-    &__body {
-      flex-wrap: wrap;
+  &__mision-vision,
+  &__valores {
 
       @include mq(sm) {
-        display: flex;
+          flex-wrap: wrap;
+          display: flex;
       }
-    }
 
     &__col {
       @include mq(md) {
@@ -84,18 +82,11 @@
     }
 
     &__image {
-      @include img($ratio: 78%, $width: 100%, $imgheight: 100%, $imgwidth: auto);
+      @include img($ratio: 85%, $width: 100%, $imgheight: 100%, $imgwidth: auto);
     }
   }
 
   &__valores {
-    &__body {
-      flex-wrap: wrap;
-
-      @include mq(sm) {
-        display: flex;
-      }
-    }
 
     &__col {
       @include mq(md) {
@@ -108,33 +99,6 @@
         &:last-child {
           order:1
         }
-      }
-    }
-
-    &__image {
-      @include img($ratio: 78%, $width: 100%, $imgheight: 100%, $imgwidth: auto);
-    }
-
-    &__content {
-      @include padd(both);
-      padding-left: 20px;
-      padding-right: 20px;
-
-      @include mq(sm) {
-        padding-left: 50px;
-        max-width: 590px;
-      }
-    }
-
-    &__title {
-      margin: 0;
-      margin-bottom: 20px;
-      color: $blue;
-      font-weight: 600;
-      font-size: 28px;
-
-      @include mq(sm) {
-        font-size: 36px;
       }
     }
 

@@ -6,19 +6,9 @@ mixin videos()
               .col-xs-24
                   h2.videos__title VIDEOS
           .row
+            each video in site.data.videos
               .col-xs-24.col-sm-6
                 .videos__player
                   .embed-responsive.embed-responsive-16by9
-                    iframe.embed-responsive-item(src="https://www.youtube.com/embed/SE_JPAeFjZc")
-              .col-xs-24.col-sm-6
-                .videos__player
-                  .embed-responsive.embed-responsive-16by9
-                    iframe.embed-responsive-item(src="https://www.youtube.com/embed/SE_JPAeFjZc")
-              .col-xs-24.col-sm-6
-                .videos__player
-                  .embed-responsive.embed-responsive-16by9
-                    iframe.embed-responsive-item(src="https://www.youtube.com/embed/SE_JPAeFjZc")
-              .col-xs-24.col-sm-6
-                .videos__player
-                  .embed-responsive.embed-responsive-16by9
-                    iframe.embed-responsive-item(src="https://www.youtube.com/embed/SE_JPAeFjZc")
+                    iframe.embed-responsive-item(src="https://www.youtube.com/embed/#{video}")
+            

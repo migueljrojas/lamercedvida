@@ -152,15 +152,33 @@
       font-size: 36px;
     }
 
-    &__col {
-      @include padd(top, half);
-      display: flex;
-      justify-content: center;
+    &__slider {
+        @include padd(top, half);
+
+        .slick-prev,
+        .slick-next {
+            &:before {
+                color: $blue;
+            }
+        }
+
+        .slick-prev {
+            left: -40px;
+        }
+
+        .slick-next {
+            right: -40px;
+        }
+    }
+
+    &__slide {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     &__article {
       display: block;
-      width: 350px;
+      width: 100%;
       max-height: 500px;
 
       &__image {
