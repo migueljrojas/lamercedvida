@@ -49,7 +49,10 @@
         @include padd;
 
         &__content {
-            padding-right: 20px;
+
+            &__wrapper {
+                padding-top: 20px;
+            }
 
             &__text {
                 font-size: 24px;
@@ -64,14 +67,11 @@
 
             &__list {
                 margin-left: 20px;
+                padding: 20px 0;
 
                 &__item {
                     display: flex;
-                    margin-bottom: 25px;
-
-                    &:first-child {
-                        margin-top: 20px;
-                    }
+                    margin-bottom: 5px;
                 }
 
                 &__bullet {
@@ -89,13 +89,7 @@
         }
 
         &__form {
-            padding-left: 20px;
-
-
-            @include mq(sm) {
-                padding-left: 50px;
-            }
-
+            padding-top: 20px;
 
             &__title {
                 margin: 0;
@@ -115,8 +109,11 @@
             }
 
             &__group {
-                display: flex;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
+
+                @include mq(sm) {
+
+                }
             }
 
             &__label {
@@ -150,6 +147,10 @@
     }
 
     &__image {
-        @include img(45%, 100%, auto, 100%);
+        @include img(85%, 100%, 100%, auto);
+
+        @include mq(sm) {
+            @include img(45%, 100%, auto, 100%);
+        }
     }
 }
