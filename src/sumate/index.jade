@@ -1,0 +1,99 @@
+extends ../_layouts/base
+
+include ../_modules/donate-cta/donate-cta
+include ../_modules/videos/videos
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.sumate
+        section.sumate__hero
+            .sumate__hero__slider
+                .sumate__hero__image
+                    img(src='https://picsum.photos/1480/700')
+
+            .sumate__hero__data
+                h1.sumate__hero__data__title Súmate
+
+                p.sumate__hero__data__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        +donate-cta
+        
+        section.sumate__body
+            .container
+                .row.nopadding
+                    .col-xs-24.col-sm-12
+                        .sumate__body__content
+                            p.sumate__body__content__text Te invitamos a conocer las formas en que podés ayudarnos a seguir Defendiendo la Vida.
+
+                            h2.sumate__body__content__title Benefactores
+                            
+                            p.sumate__body__content__text Podés colaborar con La Merced Vida a través de una donación mensual por tarjeta de crédito de $50, $100, $200, $300 o cualquier otro importe. Dejanos tus datos en el formulario que aparece al pie de la página, y nos podremos en contacto para coordinar tu ayuda.
+
+                            h2.sumate__body__content__title Donaciones
+
+                            p.sumate__body__content__text También podés colaborar con las mamás de La Merced Vida acercando: 
+                            
+                            ul.sumate__body__content__list
+                                li.sumate__body__content__list__item
+                                    span.sumate__body__content__list__bullet -
+                                    p.sumate__body__content__list__text Leche
+                                li.sumate__body__content__list__item
+                                    span.sumate__body__content__list__bullet -
+                                    p.sumate__body__content__list__text Pañales
+                                li.sumate__body__content__list__item
+                                    span.sumate__body__content__list__bullet -
+                                    p.sumate__body__content__list__text Alimentos no perecederos
+                                li.sumate__body__content__list__item
+                                    span.sumate__body__content__list__bullet -
+                                    p.sumate__body__content__list__text Artículos de perfumería
+                                li.sumate__body__content__list__item
+                                    span.sumate__body__content__list__bullet -
+                                    p.sumate__body__content__list__text Medicamentos
+
+                            p.sumate__body__content__text Recibimos las donaciones en la Parroquia Nuestra Señora de la Merced, Julián Navarro 3546, San Isidro, Buenos aires, de 10hs. a 13 hs. y de 16hs. a 19hs.
+
+                                //- h2.sumate__body__content__title Voluntarios
+
+                                //- p.sumate__body__content__text Podés colaborar con nuestro equipo, sumándote al área de trabajo que más te interese. Dejanos tus datos en el formulario que aparece al pie de la página, especificando en qué te gustaría ayudar, y nos podremos en contacto con vos.
+
+                    .col-xs-24.col-sm-12
+                        form.sumate__body__form
+                            h2.sumate__body__form__title Voluntariado
+                            p.sumate__body__form__text Podés colaborar con nuestro equipo, sumándote al área de trabajo que más te interese. Dejanos tus datos en el formulario que aparece a continuacion, especificando en qué te gustaría ayudar, y nos podremos en contacto con vos.
+                        
+                            .sumate__body__form__group
+                                label.sumate__body__form__label Nombre*
+                                input.sumate__body__form__input(type='text')
+                  
+                            .sumate__body__form__group
+                                label.sumate__body__form__label Apellido*
+                                input.sumate__body__form__input(type='text')
+                  
+                            .sumate__body__form__group
+                                label.sumate__body__form__label Email*
+                                input.sumate__body__form__input(type='email')
+                  
+                            .sumate__body__form__group
+                                label.sumate__body__form__label Edad
+                                input.sumate__body__form__input(type='number')
+                  
+                            .sumate__body__form__group
+                              label.sumate__body__form__label Telefono*
+                              input.sumate__body__form__input(type='phone')
+
+                            .sumate__body__form__group
+                                label.sumate__body__form__label Ocupacion
+                                input.sumate__body__form__input(type='text')
+                                
+                            .sumate__body__form__group
+                                label.sumate__body__form__label Colaborar*
+                                textarea.sumate__body__form__input.sumate__body__form__input--textarea
+
+                            .sumate__body__form__group
+                                button.sumate__body__form__submit Enviar
+        section.sumate__image   
+            img(src='https://picsum.photos/1480/700')
+            

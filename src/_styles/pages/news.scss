@@ -1,0 +1,47 @@
+.news {
+
+    &__hero {
+        position: relative;
+
+        &__image{
+            @include img(90%, 100%, 100%, auto);
+
+            @include mq(md) {
+            @include img(30%);
+            }
+        }
+
+        &__data {
+            position: absolute;
+            top: 5%;
+            padding: 20px;
+            width: 100%;
+
+            @include mq(md) {
+                max-width: 590px;
+                top: 25%;
+                right: 50%;
+                width: 50%;
+                padding: 0;
+            }
+
+            &__title {
+
+                @include title(24px);
+
+                @include mq(md) {
+                  @include title(36px);
+                }
+            }
+
+            &__text {
+                font-size: 20px;
+                color: $pink;
+                display: flex;
+                margin-bottom: 60px;
+                width: 80%;
+                max-width: 400px;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+extends ../_layouts/base
+
+include ../_modules/donate-cta/donate-cta
+include ../_modules/videos/videos
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.whatwedo
+        section.whatwedo__hero
+            .whatwedo__hero__slider
+                .whatwedo__hero__image
+                    img(src='https://picsum.photos/1480/700')
+
+            .whatwedo__hero__data
+                h1.whatwedo__hero__data__title ¿QUE HACEMOS?
+
+                p.whatwedo__hero__data__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        +donate-cta
+        
+        section.whatwedo__content
+            .whatwedo__content__col
+                .whatwedo__content__image
+                    img(src='https://picsum.photos/1480/700')
+    
+            .whatwedo__content__col
+                .whatwedo__content__container
+                    //- h2.whatwedo__content__title VALORES
+                    p.whatwedo__content__text 
+                        | Ayudamos a cuidar el
+                        strong.whatwedo__content__text__strong1  DERECHO 
+                        | a 
+                        strong.whatwedo__content__text__strong2  VIVIR 
+                        | de los niños. Acompañamos a las madres durante el embarazo, el nacimiento y el primer año de vida de sus hijos:
+                    
+                    ul.whatwedo__content__list
+                        li.whatwedo__content__item
+                            span.whatwedo__content__item__bullet -
+                            p.whatwedo__content__item__text Económicamente
+                        li.whatwedo__content__item
+                            span.whatwedo__content__item__bullet -
+                            p.whatwedo__content__item__text Con contención psicológica y espiritual
+                        li.whatwedo__content__item
+                            span.whatwedo__content__item__bullet - 
+                            p.whatwedo__content__item__text Haciendo el seguimiento médico.
+
+                    p.whatwedo__content__text Ayudamos a concientizar sobre la importancia de la vida a:
+                    
+                    ul.whatwedo__content__list
+                        li.whatwedo__content__item 
+                            span.whatwedo__content__item__bullet -
+                            p.whatwedo__content__item__text Adolescentes y jóvenes
+                        li.whatwedo__content__item 
+                            span.whatwedo__content__item__bullet - 
+                            p.whatwedo__content__item__text Docentes
+                        li.whatwedo__content__item
+                            span.whatwedo__content__item__bullet - 
+                            p.whatwedo__content__item__text Padres
+                        li.whatwedo__content__item
+                            span.whatwedo__content__item__bullet - 
+                            p.whatwedo__content__item__text Instituciones
+                        li.whatwedo__content__item
+                            span.whatwedo__content__item__bullet -
+                            p.whatwedo__content__item__text Organizaciones sociales
+
+                    p.whatwedo__content__text Ayudamos a difundir el derecho a la vida de todo ser humano desde la concepción hasta la muerte natural.
+
+                    p.whatwedo__content__text Contenemos psíquica y espiritualmente a mujeres y varones que sufren el síndrome post aborto.
+
+                    p.whatwedo__content__text Ayudamos a que esta obra genere un efecto multiplicador en las personas que experimentan el paso por La Merced Vida.

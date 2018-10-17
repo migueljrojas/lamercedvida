@@ -1,4 +1,5 @@
-.nosotros {
+.whatwedo {
+
     &__hero {
         position: relative;
 
@@ -6,7 +7,7 @@
             @include img(90%, 100%, 100%, auto);
 
             @include mq(md) {
-                @include img(30%);
+            @include img(30%);
             }
         }
 
@@ -29,13 +30,13 @@
                 @include title(24px);
 
                 @include mq(md) {
-                    @include title(36px);
+                  @include title(36px);
                 }
             }
 
             &__text {
                 font-size: 20px;
-                color: $mainColor;
+                color: $pink;
                 display: flex;
                 margin-bottom: 60px;
                 width: 80%;
@@ -44,48 +45,45 @@
         }
     }
 
-    &__mision-vision,
-    &__valores {
-
+    &__content {
         @include mq(sm) {
             flex-wrap: wrap;
             display: flex;
+            margin-bottom: 100px;
         }
 
         &__col {
             position: relative;
+
             @include mq(md) {
                 width: 50%;
             }
         }
 
-        &__content {
+        &__container {
             @include padd(both);
+            background: $lightestGray;
             padding-left: 20px;
             padding-right: 20px;
 
             @include mq(sm) {
                 padding-left: 50px;
-                max-width: 590px;
             }
         }
 
-        &__title {
-            margin: 0;
-            margin-bottom: 10px;
-            color: $blue;
-            font-weight: 600;
-            font-size: 28px;
-            margin-bottom: 25px;
-
-            @include mq(sm) {
-                font-size: 36px;
-            }
-        }
-
-        &__divider {
-            height: 20px;
-        }
+        // &__title {
+        //     margin: 0;
+        //     margin-bottom: 10px;
+        //     color: $blue;
+        //     font-weight: 600;
+        //     font-size: 28px;
+        //     margin-bottom: 25px;
+        //     max-width: 590px;
+        //
+        //     @include mq(sm) {
+        //         font-size: 36px;
+        //     }
+        // }
 
         &__image {
             @include img($ratio: 85%, $width: 100%, $imgheight: 100%, $imgwidth: auto);
@@ -100,5 +98,47 @@
                 height: auto;
             }
         }
+
+        &__list {
+            @include mq(sm) {
+                max-width: 540px;
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+        }
+
+        &__item {
+            display: flex;
+            margin-bottom: 5px;
+
+            &__bullet {
+                color: $mainColor;
+                margin-right:15px;
+                align-self: center;
+            }
+
+            &__text {
+                font-size: 20px;
+                margin: 0;
+
+            }
+        }
+
+        &__text {
+            font-size: 24px;
+            max-width: 540px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+
+            &__strong1 {
+                color: $mainColor;
+            }
+
+            &__strong2 {
+                color: $blue;
+            }
+
+        }
+
     }
 }

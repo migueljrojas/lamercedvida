@@ -506,7 +506,6 @@ this.activeTarget=b,this.clear();var c=this.selector+'[data-target="'+b+'"],'+th
             _.$dots = dot.appendTo(_.options.appendDots);
 
             _.$dots.find('li').first().addClass('slick-active');
-
         }
 
     };
