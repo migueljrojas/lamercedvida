@@ -29,12 +29,14 @@ block content
                     .row.nopadding.flexrow
                         .col-xs-24.col-sm-12.novedades__body__main-new__col
                             .novedades__body__main-new__image
-                                img(src='https://picsum.photos/1480/700')
+                                a(href='/articulos')
+                                    img(src='https://picsum.photos/1480/700')
                         .col-xs-24.col-sm-12.novedades__body__main-new__col
                             .novedades__body__main-new__article
-                                h2.novedades__body__main-new__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                a(href='/articulos')
+                                    h2.novedades__body__main-new__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                 p.novedades__body__main-new__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                a.novedades__body__main-new__more Seguir leyendo...
+                                a.novedades__body__main-new__more(href='/articulos') Seguir leyendo...
             
             .novedades__body__top-news
                 .container
