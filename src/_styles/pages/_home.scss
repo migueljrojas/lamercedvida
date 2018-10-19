@@ -58,13 +58,23 @@
     }
 
     &__col {
+        position: relative;
+
       @include mq(md) {
         width: 50%;
       }
     }
 
     &__image {
-      @include img($ratio: 68%, $imgheight: 100%, $imgwidth: auto);
+        @include img($ratio: 68%, $imgheight: 100%, $imgwidth: auto);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-bottom: 0;
+        height: auto;
     }
 
     &__content {
@@ -218,12 +228,15 @@
     }
 
     &__col {
+        position: relative;
 
       @include mq(md) {
         width: 50%;
       }
 
       &--data {
+          @include padd(both, half);
+          background: transparentize($mainColor, .9);
         order: 2;
 
         @include mq(md) {
@@ -280,6 +293,18 @@
 
     &__image {
       @include img($ratio: 57%, $imgheight: 100%, $imgwidth: auto);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 0;
+      height: auto;
     }
+  }
+
+  .videos {
+      background: $white;
   }
 }

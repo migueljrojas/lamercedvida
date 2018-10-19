@@ -120,6 +120,12 @@
 
         &__submit {
             @include btn(100%);
+
+            @include mq(md) {
+                min-width: auto;
+                width: 50%;
+                float: right;
+            }
         }
     }
 }

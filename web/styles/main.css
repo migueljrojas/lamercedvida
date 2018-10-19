@@ -15147,6 +15147,26 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: block;
 }
 
+.header {
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+
+@media (min-width: 992px) {
+  .header {
+    position: relative;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .header__secondary {
   background: rgba(254, 0, 97, 0.1);
 }
@@ -15158,19 +15178,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 992px) {
   .header__container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding: 20px 0;
     max-width: 1180px;
   }
@@ -15208,41 +15225,114 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   margin-left: 20px;
 }
 
+.header__logo {
+  width: 50%;
+  max-width: 300px;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
 .header__nav {
-  display: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 104px;
+  background: rgba(254, 0, 97, 0.85);
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 992px) {
   .header__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    position: static;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: auto;
+    background: none;
+    height: auto;
   }
+}
+
+.header__menu {
+  width: 100%;
+  -webkit-transform: translateY(-52px);
+          transform: translateY(-52px);
 }
 
 @media (min-width: 992px) {
   .header__menu {
+    width: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 .header__menu li {
   margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid #fff;
+}
+
+@media (min-width: 992px) {
+  .header__menu li {
+    margin-right: auto;
+    border-bottom: none;
+  }
+}
+
+.header__menu a {
+  color: #fff;
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .header__menu a {
+    font-size: 16px;
+    line-height: 1;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .header__menu a {
+    color: #fe0061;
+  }
+  .header__menu a:hover {
+    color: #cb002e;
+  }
 }
 
 .header__hamburguer {
   cursor: pointer;
   width: 25px;
   height: 25px;
-  margin: auto;
-  position: absolute;
-  right: 32px;
-  top: 30px;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .header__hamburguer {
+    display: none;
+  }
 }
 
 .header__hamburguer span {
@@ -15276,6 +15366,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           animation-direction: reverse;
 }
 
+.header.-ontop {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.header.-ontop + main {
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  padding-top: 105px;
+}
+
+@media (min-width: 992px) {
+  .header.-ontop + main {
+    padding-top: 0;
+  }
+}
+
 .header.-open .header__hamburguer span:nth-child(1) {
   -webkit-animation: inT 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
           animation: inT 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
@@ -15289,6 +15396,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .header.-open .header__hamburguer span:nth-child(3) {
   -webkit-animation: inBtm 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
           animation: inBtm 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
+}
+
+.header.-open .header__nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header + main {
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  padding-top: 62px;
+}
+
+@media (min-width: 992px) {
+  .header + main {
+    padding-top: 0;
+  }
 }
 
 @-webkit-keyframes inM {
@@ -16054,6 +16178,10 @@ button._button {
   }
 }
 
+.home__about__col {
+  position: relative;
+}
+
 @media (min-width: 992px) {
   .home__about__col {
     width: 50%;
@@ -16066,6 +16194,13 @@ button._button {
   overflow: hidden;
   padding-bottom: 68%;
   height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 0;
+  height: auto;
 }
 
 .home__about__image img {
@@ -16304,6 +16439,10 @@ button._button {
   }
 }
 
+.home__sindrome__col {
+  position: relative;
+}
+
 @media (min-width: 992px) {
   .home__sindrome__col {
     width: 50%;
@@ -16311,9 +16450,26 @@ button._button {
 }
 
 .home__sindrome__col--data {
+  padding-top: 8%;
+  padding-bottom: 8%;
+  background: rgba(254, 0, 97, 0.1);
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+
+@media (min-width: 768px) {
+  .home__sindrome__col--data {
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home__sindrome__col--data {
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -16401,12 +16557,23 @@ button._button {
   overflow: hidden;
   padding-bottom: 57%;
   height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 0;
+  height: auto;
 }
 
 .home__sindrome__image img {
   position: absolute;
   width: auto;
   height: 100%;
+}
+
+.home .videos {
+  background: #fff;
 }
 
 .nosotros__hero {
@@ -17878,6 +18045,14 @@ button._button {
   min-width: 100%;
   text-align: center;
   cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .contacto__form__submit {
+    min-width: auto;
+    width: 50%;
+    float: right;
+  }
 }
 
 .articulos__hero img {

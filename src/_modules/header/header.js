@@ -5,16 +5,22 @@ var Header = function() {
     var header = $('.header');
     var body = $('body');
     var menuOpen = $('.header__hamburguer');
-    var menuClose = $('.header__nav__close');
 
     menuOpen.on('click', function(){
-        header.addClass('-open');
-        body.addClass('-hideOverflow');
+        header.toggleClass('-open');
+        body.toggleClass('-hideOverflow');
     });
 
-    menuClose.on('click', function(){
-        header.removeClass('-open');
-        body.removeClass('-hideOverflow');
+    $(function() {
+        $(window).scroll(function() {
+           var scroll = $(window).scrollTop();
+
+           if (scroll >= 100) {
+               header.removeClass('-ontop');
+           } else {
+               header.addClass('-ontop');
+           }
+        });
     });
 };
 
