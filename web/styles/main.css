@@ -16769,7 +16769,7 @@ button._button {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding-bottom: 30%;
+    padding-bottom: 35%;
     height: 0;
   }
   .whatwedo__hero__image img {
@@ -16799,7 +16799,7 @@ button._button {
 .whatwedo__hero__data__title {
   text-transform: uppercase;
   font-size: 24px;
-  color: #fff;
+  color: #85cff6;
   text-align: left;
 }
 
@@ -16807,7 +16807,7 @@ button._button {
   .whatwedo__hero__data__title {
     text-transform: uppercase;
     font-size: 36px;
-    color: #fff;
+    color: #85cff6;
     text-align: left;
   }
 }

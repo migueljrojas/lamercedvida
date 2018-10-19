@@ -7,7 +7,7 @@
             @include img(90%, 100%, 100%, auto);
 
             @include mq(md) {
-            @include img(30%);
+            @include img(35%);
             }
         }
 
@@ -26,11 +26,10 @@
             }
 
             &__title {
-
-                @include title(24px);
+                @include title(24px, $color: $blue);
 
                 @include mq(md) {
-                  @include title(36px);
+                  @include title(36px, $color: $blue);
                 }
             }
 
