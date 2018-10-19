@@ -506,7 +506,6 @@ this.activeTarget=b,this.clear();var c=this.selector+'[data-target="'+b+'"],'+th
             _.$dots = dot.appendTo(_.options.appendDots);
 
             _.$dots.find('li').first().addClass('slick-active');
-
         }
 
     };
@@ -14666,16 +14665,22 @@ var Header = function() {
     var header = $('.header');
     var body = $('body');
     var menuOpen = $('.header__hamburguer');
-    var menuClose = $('.header__nav__close');
 
     menuOpen.on('click', function(){
-        header.addClass('-open');
-        body.addClass('-hideOverflow');
+        header.toggleClass('-open');
+        body.toggleClass('-hideOverflow');
     });
 
-    menuClose.on('click', function(){
-        header.removeClass('-open');
-        body.removeClass('-hideOverflow');
+    $(function() {
+        $(window).scroll(function() {
+           var scroll = $(window).scrollTop();
+
+           if (scroll >= 100) {
+               header.removeClass('-ontop');
+           } else {
+               header.addClass('-ontop');
+           }
+        });
     });
 };
 
@@ -14687,13 +14692,43 @@ module.exports = Header;
 // Constructor
 var Slider = function() {
     var slider = $('._slider');
+    var sliderMulti = $('._slidermulti');
     if (slider) {
         slider.each(function(){
             $(this).slick({
                 dots: true,
                 fade: true,
-                arrows:  false,
+                arrows:  true,
                 autoplay: true
+            });
+        });
+    }
+    if (sliderMulti) {
+        sliderMulti.each(function(){
+            $(this).slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
         });
     }

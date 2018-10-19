@@ -1,0 +1,178 @@
+extends ../_layouts/base
+
+include ../_modules/donate-cta/donate-cta
+include ../_modules/videos/videos
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.novedades
+        section.novedades__hero
+            .novedades__hero__slider
+                .novedades__hero__image
+                    img(src='https://picsum.photos/1480/700')
+
+            .novedades__hero__data
+                h1.novedades__hero__data__title Noticias
+
+                p.novedades__hero__data__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        +donate-cta
+        
+        section.novedades__body
+            h1.novedades__body__title NOVEDADES
+                
+            .novedades__body__main-new
+                .container
+                    .row.nopadding.flexrow
+                        .col-xs-24.col-sm-12.novedades__body__main-new__col
+                            .novedades__body__main-new__image
+                                a(href='/articulos')
+                                    img(src='https://picsum.photos/1480/700')
+                        .col-xs-24.col-sm-12.novedades__body__main-new__col
+                            .novedades__body__main-new__article
+                                a(href='/articulos')
+                                    h2.novedades__body__main-new__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__main-new__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__main-new__more(href='/articulos') Seguir leyendo...
+            
+            .novedades__body__top-news
+                .container
+                    .row
+                        .col-xs-24.col-sm-8
+                            .novedades__body__top-news__image
+                                img(src='https://picsum.photos/1480/700')
+                            .novedades__body__top-news__article
+                                h2.novedades__body__top-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__top-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__top-news__article__more Seguir leyendo...
+
+                        .col-xs-24.col-sm-8
+                            .novedades__body__top-news__image
+                                img(src='https://picsum.photos/1480/700')
+                            .novedades__body__top-news__article
+                                h2.novedades__body__top-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__top-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__top-news__article__more Seguir leyendo...
+
+                        .col-xs-24.col-sm-8
+                            .novedades__body__top-news__image
+                                img(src='https://picsum.photos/1480/700')
+                            .novedades__body__top-news__article
+                                h2.novedades__body__top-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__top-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__top-news__article__more Seguir leyendo...
+
+            .novedades__body__other-news
+                .container
+                    .row
+                        .col-xs-24.col-sm-12.novedades__body__other-news__wrapper
+                            .novedades__body__other-news__wrapper__col
+                                .novedades__body__other-news__image
+                                    img(src='https://picsum.photos/1480/700')
+                            .novedades__body__other-news__wrapper__col    
+                                .novedades__body__other-news__article
+                                    h2.novedades__body__other-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    p.novedades__body__other-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    a.novedades__body__other-news__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12.novedades__body__other-news__wrapper
+                            .novedades__body__other-news__wrapper__col    
+                                .novedades__body__other-news__image
+                                    img(src='https://picsum.photos/1480/700')
+                            .novedades__body__other-news__wrapper__col    
+                                .novedades__body__other-news__article
+                                    h2.novedades__body__other-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    p.novedades__body__other-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    a.novedades__body__other-news__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12.novedades__body__other-news__wrapper
+                            .novedades__body__other-news__wrapper__col.novedades__body__other-news__wrapper__col--image    
+                                .novedades__body__other-news__image
+                                    img(src='https://picsum.photos/1480/700')
+                            .novedades__body__other-news__wrapper__col.novedades__body__other-news__wrapper__col--article 
+                                .novedades__body__other-news__article
+                                    h2.novedades__body__other-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    p.novedades__body__other-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    a.novedades__body__other-news__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12.novedades__body__other-news__wrapper
+                            .novedades__body__other-news__wrapper__col.novedades__body__other-news__wrapper__col--image
+                                .novedades__body__other-news__image
+                                    img(src='https://picsum.photos/1480/700')
+                            .novedades__body__other-news__wrapper__col.novedades__body__other-news__wrapper__col--article
+                                .novedades__body__other-news__article
+                                    h2.novedades__body__other-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    p.novedades__body__other-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    a.novedades__body__other-news__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12.novedades__body__other-news__wrapper
+                            .novedades__body__other-news__wrapper__col    
+                                .novedades__body__other-news__image
+                                    img(src='https://picsum.photos/1480/700')
+                            .novedades__body__other-news__wrapper__col    
+                                .novedades__body__other-news__article
+                                    h2.novedades__body__other-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    p.novedades__body__other-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    a.novedades__body__other-news__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12.novedades__body__other-news__wrapper
+                            .novedades__body__other-news__wrapper__col    
+                                .novedades__body__other-news__image
+                                    img(src='https://picsum.photos/1480/700')
+                            .novedades__body__other-news__wrapper__col    
+                                .novedades__body__other-news__article
+                                    h2.novedades__body__other-news__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    p.novedades__body__other-news__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    a.novedades__body__other-news__article__more Seguir leyendo...
+            
+            .novedades__body__news-list
+                .container
+                    .row
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...
+                        .col-xs-24.col-sm-12
+                            .novedades__body__news-list__article
+                                h2.novedades__body__news-list__article__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                p.novedades__body__news-list__article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.novedades__body__news-list__article__more Seguir leyendo...

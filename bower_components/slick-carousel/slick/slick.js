@@ -497,7 +497,6 @@
             _.$dots = dot.appendTo(_.options.appendDots);
 
             _.$dots.find('li').first().addClass('slick-active');
-
         }
 
     };

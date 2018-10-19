@@ -1,0 +1,52 @@
+extends ../_layouts/base
+
+include ../_modules/donate-cta/donate-cta
+include ../_modules/videos/videos
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.principios
+        section.principios__hero
+            .principios__hero__slider
+                .principios__hero__image
+                    img(src='https://picsum.photos/1480/700')
+
+            .principios__hero__data
+                h1.principios__hero__data__title Principios
+
+                p.principios__hero__data__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        +donate-cta
+        
+        section.principios__valores
+            .principios__valores__col
+                .principios__valores__image
+                    img(src='https://picsum.photos/1480/700')
+    
+            .principios__valores__col
+                .principios__valores__content
+                    h2.principios__valores__title VALORES
+        
+                    ul.principios__valores__list
+                        li.principios__valores__item 
+                            span.principios__valores__number 1.
+                            p.principios__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+                        li.principios__valores__item 
+                            span.principios__valores__number 2.
+                            p.principios__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+                        li.principios__valores__item 
+                            span.principios__valores__number 3.
+                            p.principios__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+                        li.principios__valores__item 
+                            span.principios__valores__number 4.
+                            p.principios__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+                        li.principios__valores__item 
+                            span.principios__valores__number 5.
+                            p.principios__valores__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

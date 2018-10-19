@@ -1,4 +1,4 @@
-header.header
+header.header.-ontop
 
     .header__secondary
         .header__container
@@ -22,13 +22,18 @@ header.header
     .header__primary
         .header__container
             .header__logo
-                a(href="#")
-                    img(src='./images/logo.png')
+                a(href="/")
+                    img(src='/images/logo.png')
 
             nav.header__nav
                 ul.header__menu
                     each item in site.data.header
                         li
                             a(href=item.url)=item.name
+                            
+            .header__hamburguer
+                span
+                span
+                span
                         
                 
